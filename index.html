@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Output</title>
+</head>
+<body>
+    <h1>Latest Output</h1>
+    <pre id="content">Loading...</pre>
+
+    <script>
+        fetch("keystroke_log.txt")
+            .then(res => res.text())
+            .then(text => {
+                document.getElementById("content").textContent = text;
+            });
+    </script>
+</body>
+</html>
